@@ -53,31 +53,58 @@
         </ui>
       </nav>
       <div class="header_search-container">
-        <input id="searchField" class="search-field" type="search"  placeholder="search..."/>
+        <input
+          id="searchField"
+          class="search-field"
+          type="search"
+          placeholder="search..."
+        />
         <button type="button" class="button">Sign In</button>
       </div>
     </header>
     <main class="main">
-      <section>
-        <div>
-          <img />
-          <h3>Welcome Back Jack</h3>
-          <p>Here overview of your course</p>
+      <section class="info">
+        <div class="info_portret-container">
+          <div class="protret-container"></div>
+          <div class="description-container">
+            <h3 class="description-title">Welcome Back Jack</h3>
+            <p class="description-text">Here overview of your course</p>
+          </div>
         </div>
-        <div>
-          <h3>Total Enrolled</h3>
-          <p>5000</p>
-          <img src="./src/assets/Eye-Show-Visible.svg" />
-        </div>
-        <div>
-          <h3>Completed</h3>
-          <p>50</p>
-          <img src="./src/assets/Check-Approved-Verified.svg" />
-        </div>
-        <div>
-          <h3>Quiz Score</h3>
-          <p>50</p>
-          <img src="./src/assets/Question Mark.svg" />
+        <div class="info_container">
+          <article class="info_card">
+            <div class="card_title-container">
+              <h3 class="card_title">Total Enrolled</h3>
+              <div class="card_logo-container">
+                <img
+                  class="card_logo"
+                  src="./src/assets/Eye-Show-Visible.svg"
+                />
+              </div>
+            </div>
+            <p class="card_text">5000</p>
+          </article>
+          <article class="info_card">
+            <div class="card_title-container">
+              <h3 class="card_title">Completed</h3>
+              <div class="card_logo-container">
+                <img
+                  class="card_logo"
+                  src="./src/assets/Check-Approved-Verified.svg"
+                />
+              </div>
+            </div>
+            <p class="card_text">50</p>
+          </article>
+          <article class="info_card">
+            <div class="card_title-container">
+              <h3 class="card_title">Quiz Score</h3>
+              <div class="card_logo-container">
+                <img class="card_logo" src="./src/assets/Question Mark.svg" />
+              </div>
+            </div>
+            <p class="card_text">50</p>
+          </article>
         </div>
       </section>
       <section>

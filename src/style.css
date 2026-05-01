@@ -1,10 +1,11 @@
 :root {
   --main-font: "Sora", serif;
-  --bg-color: #fff;
+  --bg-color: rgba(0, 0, 0, 0.01);
   --text-color: #fff;
   --selected-color: rgba(28, 29, 29, 0.1);
   --bg-color-content: #1c1d1d;
   --border-radius: 16px;
+  --card-text-color: rgba(0,0,0, 0.7);
 }
 
 body {
@@ -16,6 +17,7 @@ body {
   display: grid;
   grid-template-columns: 380px 63px 1fr;
   padding: 0 53px 66px 0;
+  background-color: var(--bg-color);
 }
 
 h1,
@@ -23,7 +25,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
 }
 
@@ -81,14 +84,16 @@ h6 {
   min-width: 320px;
   position: fixed;
   /* Color/White */
-  background: #ffffff;
-  /* Shadow */
-  box-shadow: 0px 0px 63.4361px rgba(0, 0, 0, 0.07);
+  background: #fff;
+
   display: flex;
   flex-direction: column;
   gap: 80px;
   padding: 63px 30px;
   border-radius: 30px 0 0;
+
+    /* Shadow */
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.07);
 }
 
 .aside_title-container {
@@ -134,13 +139,101 @@ h6 {
   gap: 16px;
   align-items: center;
   padding: 9px 0;
+  cursor: pointer;
 }
 
 .active {
   background-color: var(--selected-color);
-  box-shadow: 0px 0px 63.4361px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 0px 63px rgba(0, 0, 0, 0.07);
 }
 
 .main {
   grid-column: 3;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.info_portret-container {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.protret-container {
+  width: 80px;
+  height: 80px;
+  background-image: url("./assets/portret.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.description-title {
+  font-size: 30px;
+}
+
+.info_container {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+}
+
+.info_card {
+  background-color: #fff;
+  box-shadow: 0px 0px 63px rgba(0, 0, 0, 0.07);
+  min-inline-size: 440px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  align-items: center;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-height: fit-content;
+}
+
+.card_title-container {
+  display: flex;
+  flex-direction: row;
+  gap: 158px;
+}
+
+.card_logo-container {
+  width: 48px;
+  height: 48px;
+  background-color: var(--bg-color-content);
+  border-radius: 8px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.card_title {
+  color: var(--card-text-color);
+  align-self: center;
+}
+
+.card_logo {
+  width: 36px;
+  height: 36px;
+}
+
+.card_text {
+  align-self: flex-start;
+  justify-self: flex-end;
 }
