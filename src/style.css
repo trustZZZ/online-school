@@ -6,6 +6,7 @@
   --bg-color-content: #1c1d1d;
   --border-radius: 16px;
   --card-text-color: rgba(0,0,0, 0.7);
+  --small-font-size: 19px;
 }
 
 body {
@@ -47,6 +48,8 @@ p {
   gap: 50px;
   font-size: 25px;
   padding: 25px 0;
+  cursor: pointer;
+  caret-color: transparent;
 }
 
 .header_search-container {
@@ -67,6 +70,8 @@ p {
   background-image: url("./assets/Search-Magnifier.svg");
   background-repeat: no-repeat;
   background-position: 20px;
+
+  
 }
 
 .button {
@@ -140,6 +145,7 @@ p {
   align-items: center;
   padding: 9px 0;
   cursor: pointer;
+  caret-color: transparent;
 }
 
 .active {
@@ -149,6 +155,9 @@ p {
 
 .main {
   grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
 }
 
 .info {
@@ -197,7 +206,6 @@ p {
   min-inline-size: 440px;
   border-radius: var(--border-radius);
   text-align: center;
-  align-items: center;
   padding: 32px;
   display: flex;
   flex-direction: column;
@@ -235,5 +243,7 @@ p {
 
 .card_text {
   align-self: flex-start;
-  justify-self: flex-end;
+  justify-self: flex-start;
+  color: var(--card-text-color);
+  font-size: var(--small-font-size);
 }
