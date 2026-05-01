@@ -1,7 +1,10 @@
 :root {
-  --main-font: 'Sora', serif;
-  --bg-color: #000;
+  --main-font: "Sora", serif;
+  --bg-color: #fff;
+  --text-color: #fff;
   --selected-color: rgba(28, 29, 29, 0.1);
+  --bg-color-content: #1c1d1d;
+  --border-radius: 16px;
 }
 
 body {
@@ -9,7 +12,10 @@ body {
   background-color: var(--bg-color);
   box-sizing: border-box;
   font-size: 25px;
-  font-family: 'Sora';
+  font-family: var(--main-font);
+  display: grid;
+  grid-template-columns: 380px 63px 1fr;
+  padding: 0 53px 66px 0;
 }
 
 h1,
@@ -25,7 +31,10 @@ h6 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px;
+
+  grid-column: 3;
+  margin-top: 66px;
+  margin-bottom: 120px;
 }
 
 .header-navigation {
@@ -34,13 +43,37 @@ h6 {
   list-style: none;
   gap: 50px;
   font-size: 25px;
+  padding: 25px 0;
 }
 
-.header-search {
+.header_search-container {
   display: flex;
   flex-direction: row;
-  gap: 70px;
+  gap: 71px;
 }
+
+.search-field {
+  background-color: var(--selected-color);
+  min-width: 400px;
+  border: none;
+  border-radius: var(--border-radius);
+  text-align: start;
+  padding-left: 92px;
+  font-size: 25px;
+
+  background-image: url("./assets/Search-Magnifier.svg");
+  background-repeat: no-repeat;
+  background-position: 20px;
+}
+
+.button {
+  background-color: var(--bg-color-content);
+  color: var(--text-color);
+  border-radius: var(--border-radius);
+  font-size: 25px;
+  min-width: 150px;
+}
+
 .aside {
   float: left;
   /* Sidebar */
@@ -74,7 +107,7 @@ h6 {
   align-items: center;
   justify-content: center;
 
-  border-radius: 16px;
+  border-radius: var(--border-radius);
 }
 
 .aside_logo img {
@@ -106,4 +139,8 @@ h6 {
 .active {
   background-color: var(--selected-color);
   box-shadow: 0px 0px 63.4361px rgba(0, 0, 0, 0.07);
+}
+
+.main {
+  grid-column: 3;
 }
