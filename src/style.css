@@ -2,11 +2,15 @@
   --main-font: "Sora", serif;
   --bg-color: rgba(0, 0, 0, 0.01);
   --text-color: #fff;
-  --selected-color: rgba(28, 29, 29, 0.1);
+  --bg-main-color: #fff;
+  --accent-color: rgba(28, 29, 29, 0.1);
   --bg-color-content: #1c1d1d;
   --border-radius: 16px;
-  --card-text-color: rgba(0,0,0, 0.7);
+  --card-text-color: rgba(0, 0, 0, 0.7);
   --small-font-size: 19px;
+  --box-shadow: 0px 0px 63px rgba(0, 0, 0, 0.07);
+  --small-border-radius: 8px;
+  --medium-border-radius: 16px;
 }
 
 body {
@@ -59,10 +63,10 @@ p {
 }
 
 .search-field {
-  background-color: var(--selected-color);
+  background-color: var(--accent-color);
   min-width: 400px;
   border: none;
-  border-radius: var(--border-radius);
+  border-radius: var(--medium-border-radius);
   text-align: start;
   padding-left: 92px;
   font-size: 25px;
@@ -70,14 +74,12 @@ p {
   background-image: url("./assets/Search-Magnifier.svg");
   background-repeat: no-repeat;
   background-position: 20px;
-
-  
 }
 
 .button {
   background-color: var(--bg-color-content);
   color: var(--text-color);
-  border-radius: var(--border-radius);
+  border-radius: var(--medium-border-radius);
   font-size: 25px;
   min-width: 150px;
 }
@@ -97,8 +99,8 @@ p {
   padding: 63px 30px;
   border-radius: 30px 0 0;
 
-    /* Shadow */
-  box-shadow: 0 0 60px rgba(0, 0, 0, 0.07);
+  /* Shadow */
+  box-shadow: var(--box-shadow);
 }
 
 .aside_title-container {
@@ -112,12 +114,12 @@ p {
 .aside_logo {
   width: 95px;
   height: 95px;
-  background-color: var(--selected-color);
+  background-color: var(--accent-color);
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: var(--border-radius);
+  border-radius: var(--medium-border-radius);
 }
 
 .aside_logo img {
@@ -149,8 +151,9 @@ p {
 }
 
 .active {
-  background-color: var(--selected-color);
-  box-shadow: 0px 0px 63px rgba(0, 0, 0, 0.07);
+  background-color: var(--accent-color);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--small-border-radius);
 }
 
 .main {
@@ -202,9 +205,9 @@ p {
 
 .info_card {
   background-color: #fff;
-  box-shadow: 0px 0px 63px rgba(0, 0, 0, 0.07);
-  min-inline-size: 440px;
-  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  min-inline-size: 380px;
+  border-radius: var(--medium-border-radius);
   text-align: center;
   padding: 32px;
   display: flex;
@@ -216,14 +219,14 @@ p {
 .card_title-container {
   display: flex;
   flex-direction: row;
-  gap: 158px;
+  justify-content: space-between;
 }
 
 .card_logo-container {
   width: 48px;
   height: 48px;
   background-color: var(--bg-color-content);
-  border-radius: 8px;
+  border-radius: var(--small-border-radius);
 
   display: flex;
 
@@ -246,4 +249,97 @@ p {
   justify-self: flex-start;
   color: var(--card-text-color);
   font-size: var(--small-font-size);
+}
+
+.overview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 40px 1fr;
+  row-gap: 32px;
+  column-gap: 48px;
+}
+
+.overview_title {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  font-size: 32px;
+}
+
+.overview_card {
+  grid-row: 2;
+  background-color: var(--bg-main-color);
+  box-shadow: var(--box-shadow);
+  min-inline-size: 423px;
+  border-radius: var(--medium-border-radius);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.overview_progress {
+  grid-row: 1 / 3;
+  grid-column: 3;
+  border-radius: var(--medium-border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.overview_card_icon-container {
+  width: 68px;
+  height: 68px;
+  background-color: var(--accent-color);
+  background-image: url("/src/assets/Mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: var(--medium-border-radius);
+}
+
+.overview_card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 19px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overview_card-text {
+  opacity: 1;
+}
+
+.accent-text{
+  opacity: 0.4;
+}
+
+.overview_card-title {
+  font-size: 25px;
+}
+
+.overview_progress {
+  padding: 48px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-inline-size: 323px;
+}
+
+.progress-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  align-items: flex-start;
+}
+
+.progressbar {
+  accent-color: var(--bg-color-content);
+  min-inline-size: 280px;
+  min-block-size: 30px;
+}
+
+.progress-list_item {
+  background-image: url("assets/Game\ Controller.svg");
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding: 8px 16px 8px 54px;
 }

@@ -107,28 +107,34 @@
           </article>
         </div>
       </section>
-      <section>
-        <h2>Recent enrolled course</h2>
-        <div>
-          <img src="./src/assets/Mobile.svg" />
-          <h3>Mobile app Devolvement</h3>
-          <progress></progress>
-          <p>4/10 Lesion</p>
-        </div>
-        <div>
-          <img src="./src/assets/Game Controller.svg" />
-          <h3>Game Development</h3>
-          <progress></progress>
-          <p>4/20 Lesion</p>
-        </div>
-        <div>
+      <section class="overview">
+        <h2 class="overview_title">Recent enrolled course</h2>
+        <article class="overview_card">
+          <div class="overview_card_icon-container"></div>
+          <h3 class="overview_card-title">Mobile app Devolvement</h3>
+          <div class="overview_card-container">
+            <progress value="4" max="10" class="progressbar"></progress>
+            <p class="overview_card-text">
+              4/<span class="accent-text">10 Lessons</span>
+            </p>
+          </div>
+        </article>
+        <article class="overview_card">
+          <div class="overview_card_icon-container"></div>
+          <h3 class="overview_card-title">Mobile app Devolvement</h3>
+          <div class="overview_card-container">
+            <progress value="4" max="10" class="progressbar"></progress>
+            <p class="overview_card-text">
+              4/<span class="accent-text">10 Lessons</span>
+            </p>
+          </div>
+        </article>
+        <div class="overview_progress">
           <h3>Daily progress</h3>
-          <ui>
-            <li>
-              <img src="./src/assets/Game Controller.svg" /> Game Development
-            </li>
-            <li><img src="./src/assets/Color Palette.svg" />Ui/Ux</li>
-            <li><img src="./src/assets/Laptop.svg" alt="" />Web Development</li>
+          <ui class="progress-list">
+            <li class="progress-list_item active">Game Development</li>
+            <li class="progress-list_item">Ui/Ux</li>
+            <li class="progress-list_item">Web Development</li>
           </ui>
         </div>
       </section>
