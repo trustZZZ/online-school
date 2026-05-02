@@ -88,10 +88,9 @@
             <div class="card_title-container">
               <h3 class="card_title">Completed</h3>
               <div class="card_logo-container">
-                <img
-                  class="card_logo"
-                  src="./src/assets/Check-Approved-Verified.svg"
-                />
+                <svg class="card_logo">
+                  <use href="src/assets/Check-Approved-Verified.svg" />
+                </svg>
               </div>
             </div>
             <p class="card_text">50</p>
@@ -138,61 +137,77 @@
           </ui>
         </div>
       </section>
-      <section>
-        <div>
-          <h2>Recent enrolled class</h2>
-          <button>All</button>
-          <button>
-            <img src="./src/assets/Search-Magnifier.svg" />
-          </button>
-          <button>
-            <img src="./src/assets/Add.svg" />
-          </button>
-          <div>
-            <img src="./src/assets/Figma.svg" alt="" />
-            <h3>Learn Figma The Ui Design Essentials</h3>
-            <p>
-              <img />
-              2:30hr
-            </p>
-            <p>
-              <img />
-              14 Lesson
-            </p>
-            <p>
-              <img />
-              Assignment
-            </p>
+      <section class="schedule">
+        <div class="schedule_completed-card">
+          <div class="completed-card-container">
+            <h2 class="completed-card_title">Recent enrolled class</h2>
+            <div class="completed-card-buttons-container">
+              <button class="button_selection">All</button>
+              <button class="completed-card-button button_search"></button>
+              <button class="completed-card-button button_add"></button>
+            </div>
           </div>
-          <div>
-            <img src="./src/assets/Robot.svg" alt="" />
-            <h3>Ethical Hacking and Penetration Testing</h3>
-            <p>
-              <img />
-              2:30hr
-            </p>
-            <p>
-              <img />
-              14 Lesson
-            </p>
-            <p>
-              <img />
-              Assignment
-            </p>
-          </div>
+          <article class="schedule-card">
+            <div class="schedule-card_icon-container"></div>
+            <div class="schedule-card-description-container">
+              <h3 class="schedule-card-title">
+                Learn Figma The Ui Design Essentials
+              </h3>
+              <div class="desscription_text-container">
+                <p class="schedule-card-description_text clock_icon">2:30hr</p>
+                <p class="schedule-card-description_text lesson_icon">
+                  14 Lesson
+                </p>
+                <p class="schedule-card-description_text check_icon">
+                  Assignment
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="schedule-card">
+            <div class="schedule-card_icon-container"></div>
+            <div class="schedule-card-description-container">
+              <h3 class="schedule-card-title">
+                Learn Figma The Ui Design Essentials
+              </h3>
+              <div class="desscription_text-container">
+                <p class="schedule-card-description_text clock_icon">2:30hr</p>
+                <p class="schedule-card-description_text lesson_icon">
+                  14 Lesson
+                </p>
+                <p class="schedule-card-description_text check_icon">
+                  Assignment
+                </p>
+              </div>
+            </div>
+          </article>
         </div>
-        <div>
-          <h2>Upcoming Class</h2>
-          <div>
-            <img src="./src/assets/Graduation Cap.svg" />
-            <h3>Cloud Computing Essentials</h3>
-            <p>5:30pm</p>
-          </div>
-          <div>
-            <img src="./src/assets/Check-Approved-Verified.svg" />
-            <h3>Mobile App Development Trends</h3>
-            <p>2:08pm</p>
-          </div>
+        <div class="schedule-upcoming">
+          <h2 class="schedule-upcoming_title">Upcoming Class</h2>
+          <article class="ucoming-card">
+            <img
+              class="ucoming-card_icon"
+              src="./src/assets/Graduation Cap.svg"
+            />
+            <div class="upcoming-card-description">
+              <h3 class="upcoming-card-description_title">
+                Cloud Computing Essentials
+              </h3>
+              <p class="upcoming-card-description_text">5:30pm</p>
+            </div>
+          </article>
+          <article class="ucoming-card">
+            <img
+              class="ucoming-card_icon"
+              src="./src/assets/Graduation Cap.svg"
+            />
+            <div class="upcoming-card-description">
+              <h3 class="upcoming-card-description_title">
+                Cloud Computing Essentials
+              </h3>
+              <p class="upcoming-card-description_text">5:30pm</p>
+            </div>
+          </article>
         </div>
       </section>
     </main>
